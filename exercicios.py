@@ -7,7 +7,7 @@ def preenche_lista(lista: list) -> None:
         lista.append(a)
         i = i + 1
         a = a + 1
-    print(lista)
+    print(f"O seu vetor é: {lista}")
 preenche_lista(l)
 
 def exibe_lista(lista: list) -> None:
@@ -21,15 +21,25 @@ def conta_elementos(lista: list) -> int:
 
 print("Tamanho:", conta_elementos(l))
 
+def busca(lista: list, elemento: int) -> int:
+    qtd = lista.count(elemento)
+    print(f"O número: {elemento} aparece um total de {qtd} vez")
+busca(l, 15)
 
-"""  --- TERMINAR EM CASA ---
-
-def retorna_indice(elemento: int) -> None:
+def retorna_indice(lista: list, elemento: int) -> str:
     x = elemento
-    indice = int(l.index(x))
-    print(indice)
+    if x in lista:
+        indice = int(lista.index(x))
+        return (indice)
+    else:
+        return print("-1")
 
-retorna_indice(10)
 
-"""
 
+print("O número escolhido está no índice: " , retorna_indice(l, 19))
+
+
+def conta_inteiro(lista: list) -> int:
+    inte = lista.count(12)
+    print(inte)
+conta_inteiro(l)
