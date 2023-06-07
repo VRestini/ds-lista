@@ -6,7 +6,7 @@ def preenche_lista(lista: list) -> None:
     while i < 10:
         lista.append(a)
         i = i + 1
-        a = a + 1
+        a = a + 1.5
     print(f"O seu vetor é: {lista}")
 preenche_lista(l)
 
@@ -40,6 +40,10 @@ print("O número escolhido está no índice: " , retorna_indice(l, 19))
 
 
 def conta_inteiro(lista: list) -> int:
-    inte = lista.count(12)
-    print(inte)
+    a = 0
+    for i in range(len(lista)):
+        if (lista[i] == round(lista[i])):
+            a = a + 1
+    print(f"A quantidade de números inteiros é: {a}")
 conta_inteiro(l)
+
